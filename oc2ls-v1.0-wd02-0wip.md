@@ -150,18 +150,23 @@ Table 2-1 summarizes the fields and subfields of an OpenC2 Command. OpenC2 Comma
 
 **Table 2-1. OpenC2 Command Field Descriptions**
 
-| Field                                | Description                  |
-|:-------------------------------------|:-----------------------------|
-| ACTION                               | Required. The task or activity to be performed.
-| TARGET                               | Required. The object of the action. The ACTION is performed on the TARGET.
-| type                                 | Required. The specific type of TARGET.
-| target-specifier                     | Optional. The specifier further identifies the target to some level of precision, such as a specific target, a list of targets, or a class of targets.
-| target-option                        | Optional. Additional information about how to perform the action for a specific target type.
-| ACTUATOR                             | Optional. The ACTUATOR may perform the ACTION on the TARGET.
-| type                                 | Required if the actuator is included, otherwise not applicable. The ACTUATOR type will be defined within the context of an actuator profile.
-| actuator-specifier                   | Optional if the actuator is included, otherwise not applicable. The specifier identifies the actuator to some level of precision, such as a specific actuator, a list of actuators, or a group of actuators.
-| actuator-option                      | Optional if the actuator is included, otherwise not applicable. Actuator-option identifies how a particular action is to be done for an actuator type.
-| COMMAND-OPTIONS(\<list-of-options\>) | Optional. Provide additional information on how the command is to be performed, such as date/time, periodicity, duration etc. COMMAND OPTIONS only influence/ impact the command and are defined independently of any ACTION, ACTUATOR or TARGET.
+| Field             | Required | Description                  |
+|:------------------|:---------|:--------------------|
+| ACTION            | Required | The task or activity to be performed.
+| TARGET            | Required | The object of the action. The ACTION is performed on the TARGET.
+| type              | Required | The specific type of TARGET.
+| target-specifier  | Optional | The specifier further identifies the target to some level of precision, such as a specific target, a list of targets, or a class of targets.
+| target-option     | Optional | Additional information about how to perform the action for a specific target type.
+| ACTUATOR          | Optional | The ACTUATOR may perform the ACTION on the TARGET.
+| type              | Required*1 | The ACTUATOR type will be defined within the context of an actuator profile.
+| actuator-specifier | Optional*2 | The specifier identifies the actuator to some level of precision, such as a specific actuator, a list of actuators, or a group of actuators.
+| actuator-option   | Optional*3  | Actuator-option identifies how a particular action is to be done for an actuator type.
+| COMMAND-OPTIONS(\<list-of-options\>) | Optional | Provide additional information on how the command is to be performed, such as date/time, periodicity, duration etc. COMMAND OPTIONS only influence/ impact the command and are defined independently of any ACTION, ACTUATOR or TARGET.
+
+* Note 1 - ACTUATOR type is required if the actuator is included, otherwise not applicable
+* Note 2 - actuator-specifier is optional if the actuator is included, otherwise not applicable
+* Note 3 - actuator-option is optional if the actuator is included, otherwise not applicable
+
 
 The TARGET of an OpenC2 command may include a set of targets of the same type, a range of targets, or a particular target. Specifiers for TARGETs are optional and provide additional precision for the target.
 
