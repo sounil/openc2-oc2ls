@@ -247,6 +247,8 @@ The TARGET is the object of the ACTION (or alternatively, the ACTION is performe
 | user_account | The User Account Object represents an instance of any type of user account, including but not limited to operating system, device, messaging service, and social media platform accounts |
 | user_session | The User Session Object represents a user session |
 | volume   | The Volume Object represents a generic drive volume |
+| windows_registry_key | The Registry Key Object represents the properties of a Windows registry key |
+| x509_certificate | The X509 Certificate Object represents the properties of an X.509 certificate, as defined by ITU recommendation X.509 |
 
 ### 2.2.4 Actuator
 An ACTUATOR is an implementation of a cyber defense function that executes the ACTION on the TARGET.  An actuator profile is a specification that identifies the subset of actions, targets and other aspects of this language specification that are meaningful in the context of a particular ACTUATOR.  The actuator profile also identifies the portions of this specification that are mandatory to implement as well as optional actions and also defines appropriate actuator specifiers and the actuator options.
