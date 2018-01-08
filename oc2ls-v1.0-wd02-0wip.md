@@ -146,7 +146,11 @@ Information with respect to how the action is to be executed is provided with on
 
 The optional COMMAND-OPTIONS field is populated by one or more ‘command-options’ that provide information that influences how the command is executed.    
 
-Table 2-1 summarizes the fields and subfields of an OpenC2 Command. OpenC2 Commands MUST contain an ACTION and TARGET and MAY contain an ACTUATOR and/or COMMAND-OPTIONS. OpenC2 is agnostic of any particular serialization; however, implementations MUST support JSON serialization of the commands.
+Table 2-1 summarizes the fields and subfields of an OpenC2 Command.
+OpenC2 Commands MUST contain an ACTION and TARGET and MAY contain an ACTUATOR and/or COMMAND-OPTIONS.
+OpenC2 is agnostic of any particular serialization;
+however, implementations MUST support JSON serialization of the commands.
+See Section {Editor's Note: TBSL - This text will be supplied in a future iteration, probably iteration3} on JSON serialization.
 
 **Table 2-1. OpenC2 Command Field Descriptions**
 
